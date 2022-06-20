@@ -53,7 +53,7 @@ abstract class AbstractController extends BaseController implements ControllerIn
         return [
             'status_code' => $status,
             'error' => true,
-            'error_description' => $e.getMessage()
+            'error_description' => $e->getMessage()
         ];
     }
 

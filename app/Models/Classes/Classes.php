@@ -23,6 +23,7 @@ class Classes extends Model
      */
     protected $fillable = [
         'name',
+        'idemployee',
         'hour',
         'weeks_day',
         'price',
