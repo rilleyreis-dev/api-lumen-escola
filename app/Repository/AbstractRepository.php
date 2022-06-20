@@ -6,7 +6,7 @@ namespace App\Repository;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AbstractRepository implements RepositoryInterface
+abstract class AbstractRepository implements RepositoryInterface
 {
     /**
      * @var Model
