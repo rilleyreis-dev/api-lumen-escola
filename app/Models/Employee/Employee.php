@@ -48,9 +48,9 @@ class Employee extends Model
     public array $rules = [
         'name' => 'required|string|max:100',
         'birth_date' => 'required|date',
-        'document' => 'required|string|max:15',
-        'due_date' => 'required|date',
-        'cellphone' => 'required|string|max:12',
+        'document' => 'required|string|max:20',
+        'due_date' => 'required|integer',
+        'cellphone' => 'required|integer',
         'email' => 'required|string|email|max:75|unique:employee',
         'password' => 'required|string|between:6,12',
     ];
