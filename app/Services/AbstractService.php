@@ -9,7 +9,7 @@ use App\Repository\RepositoryInterface;
  * Class AbstractService
  * @package App\Services
  */
-class AbstractService implements ServiceInterface
+abstract class AbstractService implements ServiceInterface
 {
     /**
      * @var RepositoryInterface
@@ -55,7 +55,7 @@ class AbstractService implements ServiceInterface
      * @return mixed
      */
     public function update(array $data, int $id): bool{
-        return $this->repository->update($data, $id);
+        return $this->repository->update($data, $id) ? true : false;
     }
 
     /**
