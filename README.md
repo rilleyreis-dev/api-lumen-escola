@@ -1,24 +1,81 @@
-# Lumen PHP Framework
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
+# API de Cadastro de Alunos, Turmas e Funcionários (Lumen PHP)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Bem-vindo à documentação da API de cadastro de dados para uma escola, desenvolvida em Lumen PHP. Esta API permite o gerenciamento de alunos, turmas e funcionários de uma escola, oferecendo recursos para criar, atualizar, visualizar e excluir informações relacionadas.
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
-## Contributing
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Instalação
 
-## Security Vulnerabilities
+Para começar a usar a API, você precisará seguir estas etapas:
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+1 - Certifique-se de ter o PHP e o Composer instalados em sua máquina.
 
-## License
+2 - Faça o download ou clone este repositório do GitHub.
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3 - Navegue até o diretório do projeto em seu sistema.
+
+4 - Instale as dependências do projeto executando o seguinte comando:
+
+```bash
+  composer install
+```
+5 - Copie o arquivo .env.example para um novo arquivo chamado .env:
+
+```bash
+  cp .env.example .env
+```
+
+6 - Configure o arquivo .env com as informações do seu ambiente (banco de dados, etc.).
+
+7 - Execute o servidor local usando o seguinte comando:
+```bash
+  php -S localhost:8000 -t public
+```
+8 - A API estará acessível em http://localhost:8000.
+
+
+    
+## Endpoint
+
+A API oferece os seguintes endpoints:
+
+### Alunos
+`GET api/students`: Retorna a lista de todos os alunos cadastrados.
+
+`GET api/students/{id}`: Retorna os detalhes de um aluno específico com base no ID fornecido.
+
+`POST api/students`: Cria um novo aluno com base nos dados fornecidos no corpo da solicitação.
+
+`PUT api/students/{id}`: Atualiza os dados de um aluno específico com base no ID fornecido.
+
+`DELETE api/students/{id}`: Exclui um aluno específico com base no ID fornecido.
+
+### Funcionários
+
+`GET /employees`: Retorna a lista de todos os funcionários cadastrados.
+
+`GET /employees/{id}`: Retorna os detalhes de um funcionário específico com base no ID fornecido.
+
+`POST /employees`: Cria um novo funcionário com base nos dados fornecidos no corpo da solicitação.
+
+`PUT /employees/{id}`: Atualiza os dados de um funcionário específico com base no ID fornecido.
+
+`DELETE /employees/{id}`: Exclui um funcionário específico com base no ID fornecido.
+
+### Turmas
+
+`GET /classes`: Retorna a lista de todas as turmas cadastradas.
+
+`GET /classes/{id`}: Retorna os detalhes de uma turma específica com base no ID fornecido.
+
+`POST /classes`: Cria uma nova turma com base nos dados fornecidos no corpo da solicitação.
+
+`PUT /classes/{id}`: Atualiza os dados de uma turma específica com base no ID fornecido.
+
+`DELETE /classes/{id}`: Exclui uma turma específica com base no ID fornecido.
+## Licença
+
+Este projeto está licenciado sob a [MIT](https://choosealicense.com/licenses/mit/)
+
